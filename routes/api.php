@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
+Route::get('/health', function () {
+    return 'ok';
+});
+
 Route::controller(PageController::class)->group(function () {
     Route::post('/users/create', 'user_create');
     Route::get('/users/by-email', 'user_fetch');
